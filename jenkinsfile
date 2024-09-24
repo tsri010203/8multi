@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage('checkout_cards'){
             steps{
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Venna12/taxi-booking.git']])
+                git branch: 'dev', url: 'https://github.com/tsri010203/taxi-booking.git'
+
             }
         }
         stage('Build_cards'){
